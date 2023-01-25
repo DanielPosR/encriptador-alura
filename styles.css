@@ -1,0 +1,139 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f5fc;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 150%;
+}
+
+body {
+    padding: 1rem;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/*LOGOTIPO*/
+.logo {
+    padding-top: 1rem;
+    margin-left: 1rem;
+    width: 2.5%;
+}
+
+
+/*Mensaje copiado*/
+.msj-copiado h6 {
+    background-color: #0a3871;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+/** CONTENIDO PRINCIPAL **/
+
+/*Ingresar texto*/
+main {
+    display: flex;
+    margin: 0 0 5rem 8rem;
+    max-width: 100%;
+}
+
+.textarea {
+    border: none;
+    color: #0a3871;
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+
+::placeholder {
+    color: #0a3871;
+}
+
+.textarea:focus {
+    outline: none;
+}
+
+.informacion {
+    color: #495057;
+    font-size: 1.8rem;
+}
+
+/** Resultados **/
+.resultados {
+    margin-left: 2rem;
+    text-align: center;
+    max-width: 90%;
+}
+
+.mensaje {
+    background: white;
+    background-image: url('Muñeco.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 2.4rem;
+    color: #0a3871;
+    height: 80%;
+    padding: 4rem;
+    position: fixed;
+}
+
+.mensaje-sin-img{
+    background-image: none;
+}
+
+.mensaje:focus {
+    outline: none;
+}
+
+
+/** BOTONES ***/
+.botones {
+    display: flex;
+    margin-top: 1.8rem;    
+}
+
+.btn-encriptar {
+    background-color: #0a3871;
+    border: 1px solid #0a3871;
+    border-radius: 2.4rem;
+    color: white;
+    cursor: pointer;
+    height: 6.7rem;
+    width: 32.8rem;
+}
+
+.btn-desencriptar {
+    background-color: #d8dfe8;
+    border: 1px solid #0a3871;
+    border-radius: 2.4rem;
+    color: #0a3871;
+    cursor: pointer;
+    margin-left: 3rem;
+    height: 6.7rem;
+    width: 32.8rem;
+}
+
+.btn-copiar {
+    border: 1px solid #0a3871;
+    border-radius: 2.4rem;
+    color: #0a3871;
+    cursor: pointer;
+    margin: 40.2rem 0 0 10.8rem;
+    position: absolute;
+    bottom: 19rem;
+    height: 6.7rem;
+    width: 33.6rem;
+}
+
+.no-visible {
+    display: none;
+}

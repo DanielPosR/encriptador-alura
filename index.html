@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Encriptador de Texto</title>
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="Logo2.png" alt="logotipo">
+    </header>
+
+    <div class="msj-copiado">
+        <h6 class="copiado"></h6>
+    </div>
+
+
+    <main class="contenedor">
+        <section>
+            <textarea class="textarea" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+
+            <div>
+                <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
+            </div>
+
+            <div class="botones">
+                <button class="btn-encriptar" id="encriptar">Encriptar</button>
+                <button class="btn-desencriptar" id="desencriptar">Desencriptar</button>
+            </div>
+        </section>
+
+
+        <section class="resultados">
+            <textarea class="mensaje" id="mensaje" cols="30" rows="10">
+
+            </textarea>
+
+            <div id="copiar" class="no-visible">
+                <button class="btn-copiar" id="copiar">Copiar</button>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+<script src="app.js"></script>
+
+</html>

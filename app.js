@@ -82,7 +82,9 @@ function desEncriptar() {
 
 
 function mostrarMensaje(texto) {
-    btnCopiar.classList.remove('no-visible');
+    if (textarea.value != '') {
+        btnCopiar.classList.remove('no-visible');
+    }
 
     mostrarResultado.classList.add('mensaje-sin-img');
     mostrarResultado.textContent = texto;

@@ -1,3 +1,9 @@
+:root {
+    --azul-fuerte: #0a3871;
+    --gris: #495057;
+    --claro: #f3f5fc;
+}
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -5,31 +11,29 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
-    font-family: 'Inter', sans-serif;
-    background-color: #f3f5fc;
-    font-weight: 400;
-    font-size: 3.2rem;
-    line-height: 150%;
 }
 
 body {
-    padding: 1rem;
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f5fc;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 1.5;
 }
+
+
 .contenedor {
-    max-width: 120rem;
+    max-width: 1200px;
+    width: 95%;
     margin: 0 auto;
-    width: 90%;
 }
 
-/*LOGOTIPO*/
-.logo {
-    padding-top: 1rem;
-    margin-left: 1rem;
-    width: 2.5%;
+.no-visible {
+    display: none;
 }
 
 
-/*Mensaje copiado*/
+
 .msj-copiado h6 {
     background-color: #0a3871;
     color: white;
@@ -37,68 +41,99 @@ body {
     margin: 0;
 }
 
-/** CONTENIDO PRINCIPAL **/
+/*LOGOTIPO*/
+.logo {
+    width: 2rem;
+    margin-top: 3rem;
+}
 
-/*Ingresar texto*/
-main {
-    display: flex;
-    margin: 0 0 5rem 8rem;
-    max-width: 100%;
+@media (min-width: 998px) {
+    .logo {
+        width: 3rem;
+    }
+}
+
+/** CONTENIDO PRINCIPAL **/
+.main {
+    margin-top: 5rem;
+}
+
+@media (min-width: 998px) {
+    .main {
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+    }
 }
 
 .textarea {
-    border: none;
-    color: #0a3871;
-    margin-top: 90px;
-    text-transform: lowercase;
-}
-
-::placeholder {
-    color: #0a3871;
-}
-
-.textarea:focus {
+    max-width: 100%;
+    width: 100%;
+    width: 70rem;
     outline: none;
+    color: var(--azul-fuerte);
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.textarea::placeholder {
+    color: var(--azul-fuerte);
 }
 
 .informacion {
-    color: #495057;
-    font-size: 1.8rem;
+    margin: 1rem;
 }
 
-/** Resultados **/
-.resultados {
-    margin-left: 2rem;
-    text-align: center;
-    max-width: 90%;
-}
 
 .mensaje {
-    background: white;
-    background-image: url('Muñeco.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    border: none;
-    border-radius: 2.4rem;
-    color: #0a3871;
-    height: 80%;
-    padding: 4rem;
-    position: fixed;
-}
-
-.mensaje-sin-img{
-    background-image: none;
-}
-
-.mensaje:focus {
+    margin: 0 0 5rem 0;
+    max-width: 100%;
+    width: 100%;
+    width: 70rem;
     outline: none;
+    color: var(--azul-fuerte);
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
+@media (min-width: 998px) {
+    .mensaje {
+        background-image: url(./Muñeco.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 90%;
+        max-height: 100%;
+        height: 100vh;
+        height: 50rem;
+        padding: 2rem;
+    }
+
+    .mensaje-sin-img {
+        background-image: none;
+    }
+}
+
+.mensaje::placeholder {
+    color: var(--azul-fuerte);
+}
 
 /** BOTONES ***/
 .botones {
     display: flex;
-    margin-top: 1.8rem;    
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .botones {
+        flex-direction: row;
+    }
 }
 
 .btn-encriptar {
@@ -107,8 +142,9 @@ main {
     border-radius: 2.4rem;
     color: white;
     cursor: pointer;
-    height: 6.7rem;
-    width: 32.8rem;
+    padding: 1rem 3rem;
+    display: block;
+    width: 100%;
 }
 
 .btn-desencriptar {
@@ -117,9 +153,9 @@ main {
     border-radius: 2.4rem;
     color: #0a3871;
     cursor: pointer;
-    margin-left: 3rem;
-    height: 6.7rem;
-    width: 32.8rem;
+    padding: 1rem 3rem;
+    display: block;
+    width: 100%;
 }
 
 .btn-copiar {
@@ -127,13 +163,29 @@ main {
     border-radius: 2.4rem;
     color: #0a3871;
     cursor: pointer;
-    margin: 40.2rem 0 0 10.8rem;
-    position: absolute;
-    bottom: 19rem;
-    height: 6.7rem;
-    width: 33.6rem;
+    padding: 1rem 3rem;
+    display: block;
+    margin-bottom: 4rem;
+    margin-top: -5rem;
 }
 
-.no-visible {
-    display: none;
+
+/*FOOTER*/
+.footer {
+    background-color: var(--gris);
+}
+
+.footer-p {
+    margin: 0;
+    font-weight: 400;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        margin-top: 5rem;
+    }
 }
